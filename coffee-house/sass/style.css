@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
