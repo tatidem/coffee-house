@@ -3,9 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cofee-house</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <div class="header__wrapper">
+                <a href="#" class="logo"></a>
+                <div class="header__nav">
+                    <ul class="nav">
+                        <li><a href="#favorite">Favorite coffee</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#mobile-app">Mobile app</a></li>
+                        <li><a href="#contacts">Contact us</a></li>
+                    </ul>
+                </div>
+                <button class="button menu-button header_menu-button">
+                    <p>Menu</p>
+                    <img src="img/icons/cofee-cup.svg" alt="menu-icon" class="menu-icon">
+                </button>  
+            </div>
+        </header>
+        <main>
+            <section class="enjoy">
+                <div class="enjoy__content">
+                    <h1 class="light"><span class="text-accent">Enjoy </span>premium<br>coffee at our<br>charming cafe</h1>
+                    <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                    <button class="button menu-button">Menu</button>
+                </div>
+            </section>
+            <section class="favorite" id="favorite">
+                <h2>Choose your <span class="text-accent">favorite</span> coffee</h2>
+                <div class="favorite__wrapper">
+                    <div class="favorite__arrows">
+                        <button class="favorite__arrows_left">
+                            <img src="img/icons/arrow-left.svg" alt="arrow-left">
+                        </button>
+                    </div>
+                    <div class="favorite_content">
+                        <img src="img/coffee-slider-1.png" alt="coffee-slider1">
+                        <h3>S’mores Frappuccino</h3>
+                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                        <div class="price">$5.50</div>
+                        <div class="favorite__controls">
+                            <button class="favorite-control"></button>
+                            <button class="favorite-control"></button>
+                            <button class="favorite-control"></button>
+                        </div>
+                    </div>
+                    <div class="favorite__arrows">
+                        <button class="favorite__arrows_right">
+                            <img src="img/icons/arrow-right.svg" alt="arrow-right">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <h2>Resource is <span class="text-accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+                <div class="about__gallery">
+                    <img src="img/about-1.jpg" alt="about-1">
+                    <img src="img/about-2.jpg" alt="about-2">
+                    <img src="img/about-3.jpg" alt="about-3">
+                    <img src="img/about-4.jpg" alt="about-4">
+                </div>
+            </section>
+            <section class="mobile-app" id="mobile-app">
+                <div class="mobile-app__text-content">
+                    <h2><span class="text-accent">Download</span>our apps to start ordering</h2>
+                    <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+                    <button class="button mobile-app_button">
+                        <div class="button-content">
+                            <img src="img/icons/apple.svg" alt="apple">
+                            <p>Available on the</p>
+                            <p class="store">App Store</p>
+                        </div>
+                    </button>
+                    <button class="button mobile-app_button">
+                        <div class="button-content">
+                            <img src="img/icons/google.svg" alt="google">
+                            <p>Available on the</p>
+                            <p class="store">Google Play</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="mobile-app__mobile-screens">
+                    <img src="img/mobile-screens.png" alt="mobile-screens">
+                </div>
+            </section>
+        </main>
+        <footer class="contacts" id="contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__content light">
+                    <div class="contacts__content_left">
+                        <h2 class="light">Sip, Savor, Smile. <span class="text-accent">It’s coffee time!</span></h2>
+                        <ul class="social-media">
+                            <li>
+                                <a href=""><img src="img/icons/twitter.svg" alt="twitter"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/icons/instagram.svg" alt="instagram"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/icons/facebook.svg" alt="facebook"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__content_right">
+                        <p>Contact us</p>
+                        <div class="contacts">
+                            <a href="" class="link-item"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
