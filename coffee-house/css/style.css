@@ -304,4 +304,71 @@ p.store {
   line-height: 150%;
 }
 
+.mobile-app_button:hover {
+  cursor: pointer;
+  background-color: #665F55;
+  color: #E1D4C9;
+}
+
+footer {
+  margin-top: 10rem;
+  background-color: #665F55;
+  border-radius: 40px;
+  padding: 10rem 10rem 9rem;
+  justify-content: space-between;
+  gap: 20rem;
+}
+
+.contacts__content {
+  color: #E1D4C9;
+  display: flex;
+  gap: 5rem;
+}
+
+.contacts__content_left {
+  width: 50%;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 4rem;
+}
+
+.social-media li {
+  margin-right: 15px;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+
+.contacts a {
+  color: #E1D4C9;
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+.link-item {
+  display: flex;
+}
+
+.contacts__content_right .contact {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.contacts p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=style.css.map */
