@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   margin: 0;
@@ -21,6 +22,16 @@ h1 {
   font-weight: 600;
   line-height: 105%;
   margin: 0;
+}
+
+.offer h1 {
+  color: #403F3D;
+  max-width: 80rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+  font-size: 6rem;
 }
 
 h2 {
@@ -391,6 +402,101 @@ footer {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer__button {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.offer__button-content {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.offer__button-content:first-child {
+  background-color: #665F55;
+  color: #E1D4C9;
+  pointer-events: none;
+}
+
+.menu-button.header_menu-button {
+  pointer-events: none;
+}
+
+.offer__button-content p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  margin: 0;
+}
+
+.offer__gallery {
+  margin-top: 3.5rem;
+}
+
+.gallery-item {
+  height: 50.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Выравнивание контента вверху карточки */
+  max-width: 100%; /* Предотвращаем переполнение родительского контейнера */
+  border: 1px solid #C1B6AD;
+  border-radius: 4rem;
+}
+
+.gallery-item__text {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.gallery-item__text p {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.gallery-item img {
+  display: flex;
+  align-items: start;
+  border-radius: 4rem;
+}
+
+.galery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 элемента по горизонтали */
+  gap: 40px; /* Расстояние между элементами */
+}
+
+.gallery-item__text.price {
+  margin-top: 1rem;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
 }
 
 /*# sourceMappingURL=style.css.map */
