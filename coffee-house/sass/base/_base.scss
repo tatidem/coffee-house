@@ -50,13 +50,14 @@ h3{
 }
 
 .button{
-  display: flex;
+    display: flex;
     width: 20rem;
     height: 6.4rem;
     justify-content: center;
     align-items: center;
     background-color: $color-background;
     border-radius: 100px;
+    border: 0.1rem solid $color-text;
 }
 
 .price{
