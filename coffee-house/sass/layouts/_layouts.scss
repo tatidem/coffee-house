@@ -166,12 +166,18 @@
     grid-gap: 4rem;
     height: 106rem;
   }
+
+  .about__gallery img:hover {
+    transform: scale(0.9);
+    object-fit: cover; 
+  }
   
   .about__gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 2rem;
+    transition: transform 0.3s ease;
   }
   
   .about__gallery img:nth-child(2),
