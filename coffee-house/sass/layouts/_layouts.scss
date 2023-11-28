@@ -413,15 +413,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-   
-   
 }
 
 .gallery-item img{
     display: flex;
     align-items: start;
     border-radius: 4rem;
-    
 }
 
 .galery__grid {
@@ -429,6 +426,8 @@
     grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 элемента по горизонтали */
     gap: 40px; /* Расстояние между элементами */
 }
+
+
 
 .gallery-item__text.price{
     margin-top: 1rem;
