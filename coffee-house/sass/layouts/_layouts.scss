@@ -169,7 +169,7 @@
 
   .about__gallery img:hover {
     transform: scale(0.9);
-    object-fit: cover; 
+    object-fit: cover;
   }
   
   .about__gallery img {
@@ -182,7 +182,7 @@
   
   .about__gallery img:nth-child(2),
   .about__gallery img:nth-child(3) {
-    height: 43rem;
+    height: 43rem
   }
   
   .about__gallery img:nth-child(1),
@@ -227,6 +227,7 @@
 
 
   .button-content{
+    margin-left: 2rem;
     display: flex;
     justify-content: start;
     gap: 1rem;
@@ -272,6 +273,12 @@
     gap: 5rem;
     
   }
+
+  .contacts__content h2 {
+    color: $color-background;
+    
+  }
+  
   
 .contacts__content_left {
    width: 50%;

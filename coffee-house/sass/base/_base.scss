@@ -60,6 +60,18 @@ h3{
     border: 0.1rem solid $color-text;
 }
 
+.button.mobile-app_button{
+  justify-content: left;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: $color-footer;
+  color: $color-background;
+}
+
+
+
 .price{
   font-family: Inter;
   font-size: 2.4rem;
