@@ -93,18 +93,14 @@ h3{
 
 
 
-.button.mobile-app_button{
-  justify-content: left;
-}
+
 
 
 .enjoy_menu-button:hover {
   background-color: $color-background;
   color: $color-text;
-  display: flex;
-  justify-content: center;
   
- 
+
 }
 
 .enjoy_menu-button::after {
@@ -123,10 +119,7 @@ h3{
  
 }
 
-.cup_menu{
-  width: 3rem;
-  height: 1.2rem;
-}
+
 
 
 //Favorites
@@ -185,6 +178,10 @@ h3{
 }
 
 //Mobile App
+
+.button.mobile-app_button{
+  justify-content: left;
+}
 
 .mobile-app__buttons{
   display: flex;
@@ -262,6 +259,21 @@ h3{
   color: $color-background;
   pointer-events: none;
 }
+
+.offer__button-content:first-child{
+  background-color: $color-footer;
+  color: $color-background;
+  pointer-events: none;
+}
+
+.offer__button-content:nth-child(2):hover,
+.offer__button-content:nth-child(3):hover{
+  background-color: $color-footer;
+  color: $color-background;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
 
 .header_menu-button_2{
   pointer-events: none;

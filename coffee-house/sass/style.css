@@ -84,15 +84,9 @@ h3 {
   position: relative;
 }
 
-.button.mobile-app_button {
-  justify-content: left;
-}
-
 .enjoy_menu-button:hover {
   background-color: #E1D4C9;
   color: #403F3D;
-  display: flex;
-  justify-content: center;
 }
 
 .enjoy_menu-button::after {
@@ -108,11 +102,6 @@ h3 {
   opacity: 1;
   transform: scale(1);
   left: -1rem;
-}
-
-.cup_menu {
-  width: 3rem;
-  height: 1.2rem;
 }
 
 .favorite__controls {
@@ -163,6 +152,10 @@ h3 {
 .favorite__arrows_right:hover path {
   stroke: #E1D4C9;
   transition: stroke 0.5s ease;
+}
+
+.button.mobile-app_button {
+  justify-content: left;
 }
 
 .mobile-app__buttons {
@@ -230,6 +223,20 @@ h3 {
   background-color: #665F55;
   color: #E1D4C9;
   pointer-events: none;
+}
+
+.offer__button-content:first-child {
+  background-color: #665F55;
+  color: #E1D4C9;
+  pointer-events: none;
+}
+
+.offer__button-content:nth-child(2):hover,
+.offer__button-content:nth-child(3):hover {
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .header_menu-button_2 {
