@@ -77,6 +77,7 @@ h3 {
   cursor: pointer;
   background-color: #665F55;
   color: #E1D4C9;
+  transition: all 0.7s ease;
 }
 
 .price {
@@ -139,13 +140,19 @@ h3 {
   margin-right: 0.8rem;
 }
 
-.header_menu-button p:hover::before {
+.header_menu-button p::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 0.2rem;
   background-color: #403F3D;
   bottom: -0.3rem;
+}
+
+.header_menu-button p:hover::before {
+  width: 100%;
+  left: 0;
+  transition: width 1s ease, left 1s ease;
 }
 
 .enjoy {
@@ -239,6 +246,7 @@ h3 {
   color: #E1D4C9;
   background-color: #665F55;
   border-color: none;
+  transition: all 0.7s ease;
 }
 
 .about {

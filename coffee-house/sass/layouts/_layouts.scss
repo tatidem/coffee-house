@@ -34,6 +34,7 @@
     background-color: $color-text; 
     bottom: -0.3rem; 
     
+    
   }
 
   .header_menu-button, .enjoy_menu-button {
@@ -54,14 +55,21 @@
     margin-right: 0.8rem;
   }
   
-  .header_menu-button p:hover::before {
+  .header_menu-button p::before {
     content: "";
     position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background-color: $color-text;
+    bottom: -0.3rem;
+    
+}
+
+.header_menu-button p:hover::before {
     width: 100%;
-    height: 0.2rem; 
-    background-color: $color-text; 
-    bottom: -0.3rem; 
-  }
+    left: 0; 
+    transition: width 1s ease, left 1s ease; 
+}
 
   
 
@@ -155,6 +163,7 @@
     color: $color-background;
     background-color: $color-footer;
     border-color: none;
+    transition: all 0.7s ease;
   }
 
   .about{
