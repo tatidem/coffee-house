@@ -496,6 +496,13 @@ footer {
   border-radius: 4rem;
 }
 
+.gallery-item:hover {
+  transform: scale(0.9);
+  object-fit: cover;
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+
 .galery__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 элемента по горизонтали */
