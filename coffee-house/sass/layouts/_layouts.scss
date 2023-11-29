@@ -126,45 +126,7 @@
     line-height: 150%;
   }
 
-  .favorite__controls{
-    display: flex;
-    margin-top: 4rem;
-    justify-content: space-between;
-    gap:1.2rem;
-  }
-
-  .favorite-control{
-    width: 4rem;
-    height: 0.4rem;
-    background-color: $color-border-light;
-    border-radius: 100px;
-    border: none;
-  }
-
-  .favorite-control_active{
-    background-color: $color-footer;
-  }
-
-  .favorite__arrows button{
-    display: flex;
-    width: 6rem;
-    height: 6rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10rem;
-    margin-bottom: 4rem;
-    color: $color-footer;
-    background-color: $color-background;
-    border-color: $color-footer;
-  }
-
-  .favorite__arrows button:hover{
-    cursor: pointer;
-    color: $color-background;
-    background-color: $color-footer;
-    border-color: none;
-    transition: all 0.7s ease;
-  }
+  
 
   .about{
     margin-top: 10rem;
@@ -230,44 +192,6 @@
   }
   
  
-
-  .mobile-app__buttons{
-    display: flex;
-    gap: 2rem;
-  }
-
-
-  .button-content{
-    margin-left: 2rem;
-    display: flex;
-    justify-content: start;
-    gap: 1rem;
-    
-  }
-
-  .button-text p{
-    font-family: Inter;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-    text-align: start;
-  }
-  p.store{
-    text-align: start;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-  }
-
-  .mobile-app_button:hover{
-    cursor: pointer;
-    background-color: $color-footer;
-    color: $color-background;
-
-  }
   
   footer{
     margin-top: 10rem;
@@ -314,9 +238,9 @@
     text-decoration: none;
   }
 
-//   .social-media a:hover {
-//     background-color: $color-accent;
-//   }
+  .social-media a:hover path{
+   background-color: $color-accent;
+}
   
   .contacts a {
     color: $color-background;
@@ -356,40 +280,6 @@
 }
 
 
-.offer__button{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.6rem;
-}
-.offer__button-content{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    padding: 8px 16px 8px 8px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.8rem;   
-}
-
-.offer__button-content:first-child{
-    background-color: $color-footer;
-    color: $color-background;
-    pointer-events: none;
-}
-
-.header_menu-button_2{
-    pointer-events: none;
-}
-
-.offer__button-content p{
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 160%;
-    margin: 0;
-}
 
 .offer__gallery{
     margin-top: 3.5rem;
@@ -400,8 +290,8 @@
     height: 50.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Выравнивание контента вверху карточки */
-    max-width: 100%; /* Предотвращаем переполнение родительского контейнера */
+    justify-content: flex-start; 
+    max-width: 100%; 
     border: 1px solid $color-border-light;
     border-radius: 4rem;
 }
@@ -440,8 +330,8 @@
 
 .galery__grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 элемента по горизонтали */
-    gap: 40px; /* Расстояние между элементами */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 40px;
 }
 
 

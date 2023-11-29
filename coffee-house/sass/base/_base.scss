@@ -59,6 +59,19 @@ h3{
   color: $color-accent;
 }
 
+.price{
+  font-family: Inter;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; 
+  margin: 0;
+}
+
+
+//Buttons
+
+
 .button{
     display: flex;
     width: 20rem;
@@ -87,11 +100,153 @@ h3{
 
 
 
-.price{
+
+
+//Favorites
+
+.favorite__controls{
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  gap:1.2rem;
+}
+
+.favorite-control{
+  width: 4rem;
+  height: 0.4rem;
+  background-color: $color-border-light;
+  border-radius: 100px;
+  border: none;
+}
+
+.favorite-control_active{
+  background-color: $color-footer;
+}
+
+.favorite__arrows button{
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  margin-bottom: 4rem;
+  color: $color-footer;
+  background-color: $color-background;
+  border: 1px solid $color-text;
+}
+
+.favorite__arrows button:hover {
+  cursor: pointer;
+  // color: $color-background;
+  background-color: $color-footer;
+  border-color: none;
+  border: 1px solid $color-footer;
+  transition: all 0.7s ease;
+  
+}
+
+
+.favorite__arrows_left:hover path {
+  stroke: $color-background;
+  transition: stroke 0.5s ease;
+}
+
+.favorite__arrows_right:hover path {
+  stroke: $color-background;
+  transition: stroke 0.5s ease;
+}
+
+//Mobile App
+
+.mobile-app__buttons{
+  display: flex;
+  gap: 2rem;
+  
+}
+
+
+.button-content{
+  margin-left: 2rem;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  
+  
+}
+
+.mobile-app__text-content p.available{
   font-family: Inter;
-  font-size: 2.4rem;
+  font-size: 10px !important;
   font-style: normal;
   font-weight: 600;
-  line-height: 125%; 
+  line-height: 130%;
+  text-align: start;
+}
+.mobile-app__text-content p.store{
+  text-align: start;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.mobile-app_button:hover{
+  cursor: pointer;
+  background-color: $color-footer;
+  color: $color-background;
+  border: 1px solid $color-footer;
+  transition: all 0.7s ease;
+  
+
+}
+
+.mobile-app_button:hover path {
+  fill: $color-background;
+  transition: all 0.7s ease;
+}
+
+
+
+
+//Offer
+
+
+.offer__button{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.offer__button-content{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;   
+  border: 1px solid $color-border-light
+}
+
+.offer__button-content:first-child{
+  background-color: $color-footer;
+  color: $color-background;
+  pointer-events: none;
+}
+
+.header_menu-button_2{
+  pointer-events: none;
+}
+
+.offer__button-content p{
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
   margin: 0;
 }
+
+
