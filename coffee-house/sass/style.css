@@ -451,12 +451,15 @@ footer {
   text-decoration: none;
 }
 
-.contacts a:hover {
-  text-decoration: underline;
+.link-item p {
+  margin-left: 0.7rem;
 }
 
-.link-item {
+.contacts__content_right {
+  position: relative;
+  margin-top: 3rem;
   display: flex;
+  flex-direction: column;
 }
 
 .contacts__content_right .contact {
@@ -466,11 +469,38 @@ footer {
   font-weight: 600;
 }
 
+.contact-item {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
 .contacts p {
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+  margin: 0;
+  line-height: 150%;
+  margin-left: 0.6rem;
+}
+
+.link-item {
+  display: flex;
+  position: relative;
+}
+
+a.link-item:hover::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  background-color: #E1D4C9;
+  bottom: -0.3rem;
+  transition: all 1s ease-in-out;
 }
 
 .offer {
