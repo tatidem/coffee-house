@@ -238,9 +238,35 @@
     text-decoration: none;
   }
 
-  .social-media a:hover path{
-   background-color: $color-accent;
-}
+//   .social-media a:hover path{
+//    background-color: $color-accent;
+// }
+
+.social{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: $color-footer;
+    border: 1px solid $color-background;
+    transition: all 1s ease-in-out;
+    }
+
+
+.social:hover{
+    cursor: pointer;
+    background-color: $color-background;
+    border: 1px solid $color-footer;
+
+    }
+
+.social:hover path{
+    stroke: $color-footer;
+
+    }
+
   
   .contacts a {
     color: $color-background;
