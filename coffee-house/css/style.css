@@ -69,6 +69,10 @@ h3 {
   border: 0.1rem solid #403F3D;
 }
 
+.enjoy_menu-button {
+  border: none;
+}
+
 .button.mobile-app_button {
   justify-content: left;
 }
