@@ -1,0 +1,20 @@
+.enjoy {
+    background: url("../img/img-hero.jpg") center/cover no-repeat;
+    border-radius: 4rem;
+    overflow: hidden; 
+    padding: 10rem; 
+  }
+
+  .enjoy__content{
+    max-width: 53rem;
+  }
+
+  .enjoy p{
+    margin: 4rem 0;
+    font-family: Inter;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: $color-background;
+  }
