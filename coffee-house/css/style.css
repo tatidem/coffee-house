@@ -834,7 +834,7 @@ a.link-item:hover::before {
     width: 24rem;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   h1 {
     font-size: 4.2rem;
     font-weight: 600;
