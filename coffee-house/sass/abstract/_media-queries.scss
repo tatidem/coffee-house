@@ -196,13 +196,28 @@
         font-size: 5rem;
        
       }
+
+     
+}
+
+@media (max-width: 550px){
+    .galery__grid {
+        
+        grid-template-columns: repeat(1, minmax(0, 1fr)); 
+        
+    }
+    
+    .gallery-item__text{
+        width: 24rem;
+       
+        
+    }
 }
 
 @media (max-width: 380px){
     
 
     h1 {
-        font-family: Inter;
         font-size: 4.2rem;
         
         font-weight: 600;
@@ -252,6 +267,17 @@
         gap: 2.5rem;
          
       }
+.offer h1{
+    font-size: 3.2rem;
+}
+
+.offer__button{
+    
+    gap: 0.5rem;
+  }
+
+ 
+
 }
 
 
