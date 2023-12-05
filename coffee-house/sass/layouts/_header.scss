@@ -1,7 +1,7 @@
-header{
-  max-width: 100%;
-  margin: 0 auto;
-}
+// header{
+//   max-width: 100%;
+//   margin: 0 auto;
+// }
 .header__wrapper{
   
     display: flex;
@@ -84,3 +84,29 @@ header{
 .header_menu-button:hover::before {
     transform: scaleX(1);
 }
+
+.burger-icon{
+  display: none;
+  width: 4.4rem;
+  height: 4.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  border: 0.1rem solid $color-text;
+}
+
+.burger-icon .burger-lines{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.burger-lines .line{
+  width: 1.6rem;
+  height: 0.15rem;
+  background-color: $color-text;
+  
+}
+
