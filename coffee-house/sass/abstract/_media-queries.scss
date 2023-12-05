@@ -1,15 +1,376 @@
-@media (max-width: 1000px){
+
+@media (max-width: 1200px){
+  
     .container{
-        width: 100%;
-        margin: 0 auto;
+        // width: 100%;
+        // margin: 0 auto;
+        overflow-x: hidden;
     }
-    .header__nav{
-        display: none;
-    }
+    
+    .mobile-app{
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10rem;
+      }
+
+      .mobile-app__text-content{
+    
+        max-width: 68.8rem;
+        
+      }
+
+      .mobile-app__mobile-screens{
+        display: flex;
+        justify-content: center;
+      }
+
+    
 }
+
+@media (max-width: 1100px){
+.galery__grid {
+        
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    
+}
+}
+
+@media (max-width: 1000px){
+    .nav{
+        gap: 2rem;
+    }
+
+    .contacts__content.light{
+        
+        flex-direction:column;
+        justify-content: space-between;
+        
+      }
+
+      footer{
+        padding: 10rem 6rem;
+      }
+    
+      .contacts__content_left {
+        width: auto;
+    }
+
+    .contacts__content_right{
+        
+        margin-top: 3.5rem;
+        margin-bottom: 0.5rem;
+         
+      }
+}
+
 
 @media (max-width: 768px){
     .header__nav{
         display: none;
     }
+
+    .header_menu-button{
+        display: none;
+    }
+
+
+    .burger-icon{
+        display: flex;
+    }  
+    
+    .enjoy{
+        padding: 10rem 6rem;
+    }
+
+    
+    .enjoy_menu-button::after{
+        transform: scale(1);
+        margin-right: 0.3rem;
+        margin-left: 0.7rem;
+        width:fit-content
+    }
+
+    .about__gallery{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: fit-content;
+    }
+
+    .about__gallery .image-wrapper:nth-child(2),
+    .about__gallery .image-wrapper:nth-child(3)
+    {
+      display: none;
+    }
+
+    .about__gallery .image-wrapper:nth-child(4) {
+        margin-top: 0rem; 
+      }
+    
+      .galery__grid {
+        
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        
+    }
+
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(7),
+    .gallery-item:nth-child(8) {
+        display: none;
+    }
+
+    .offer__gallery{
+        margin: 3.5rem 1.5rem;
+     
+    }
+    .gallery-item:nth-child(3) .price{
+      
+      
+        margin-top: 2.3rem;
+      }
+
+
+      .refresh-button__wrapper{
+            display: flex;
+            justify-content:center;
+            margin-top: 3.7rem;
+            margin-bottom: -3.8rem;
+      }
+
+      .refresh-button{
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 0.1rem solid $color-footer;
+        
+
+    }
+
+    a.link-item::before {
+   
+        width: 40%;
+       
+    }
+
+    .favorite__wrapper{
+        width: 100%;
+    }
+}
+
+@media (max-width: 675px){
+    .favorite__arrows button{
+        display: none;
+    }
+
+    .favorite_content{
+        width: 100%;
+    }
+
+    .favorite_content img{
+        width: 34.8rem;
+        height: 34.8rem;
+    }
+
+    .mobile-app__mobile-screens img{
+        width: 38rem;
+        height: 38rem;
+           
+      } 
+
+      .container {
+        padding: 0 1.6rem 4rem 1.6rem ;
+    }
+
+    h1 {
+        font-size: 5rem;
+        
+      }
+
+      h2 {
+        font-size: 5rem;
+       
+      }
+}
+
+@media (max-width: 380px){
+    
+
+    h1 {
+        font-family: Inter;
+        font-size: 4.2rem;
+        
+        font-weight: 600;
+        line-height: 115%;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+       
+      }
+      
+    .enjoy {
+        padding: 6rem 1.6rem;
+    
+    }
+
+   
+    .mobile-app__buttons{
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .mobile-app__mobile-screens img{
+        width: 34.8rem;
+        height: 34.8rem;
+           
+      } 
+
+      .mobile-app__mobile-screens{
+        margin-top: -6.1rem;
+      }
+      
+      footer{
+        padding: 6rem 1.6rem;
+      }
+
+      .contacts__content_right{
+        
+        margin-top: 0rem;
+        margin-bottom: 0.5rem;
+         
+      }
+      .contacts__content{
+        
+        gap: 2.5rem;
+         
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (hover: hover){
+    .enjoy_menu-button:hover {
+        background-color: $color-background;
+        color: $color-text; 
+      }
+}
+ 
+@media (hover: hover){
+    .enjoy_menu-button:hover::after {
+        margin-left: 0.5rem;
+        opacity: 1;
+        transform: scale(1);
+        left: -1rem;
+      }
+}
+  
+@media (hover: hover){
+    a.nav-link:hover::after{
+        width: 100%;
+        left: 0;
+        transform: scaleX(1);
+    } 
+}
+@media (hover: hover){
+    .image-wrapper img:hover {
+        transform: scale(0.9);
+      }
+}
+
+
+@media (hover: hover){
+    .social:hover{
+        cursor: pointer;
+        background-color: $color-background;
+        border: 0.1rem solid $color-footer;
+    
+        }
+}
+
+@media (hover: hover){
+    .social:hover path{
+        stroke: $color-footer;
+    }
+}
+@media (hover: hover){
+    a.link-item:hover::before{
+        transform: scaleX(1);
+    }
+}
+@media (hover: hover){
+    .gallery-item .image-wrapper img:hover {
+        cursor: pointer;
+      }
+}
+
+
+
+@media (hover: none){
+    .favorite__arrows button:hover {
+        cursor: pointer;
+        background-color: $color-footer;
+        border-color: none;
+        border: 0.1rem solid $color-footer;
+        transition: all 0.7s ease;
+        
+      }
+}
+@media (hover: none){
+    .favorite__arrows_right:hover path {
+        stroke: $color-background;
+        transition: stroke 0.5s ease;
+      }
+}
+
+@media (hover: none){
+    .favorite__arrows_left:hover path {
+        stroke: $color-background;
+        transition: stroke 0.5s ease;
+      }
+}
+
+@media (hover: none){
+    .mobile-app_button:hover{
+        cursor: pointer;
+        background-color: $color-footer;
+        color: $color-background;
+        border: 0.1rem solid $color-footer;
+        transition: all 0.7s ease;
+      }
+}
+@media (hover: hover){
+    .mobile-app_button:hover path {
+        fill: $color-background;
+        transition: all 0.7s ease;
+      }
+}
+@media (hover: none){
+    .offer__button-content:nth-child(2):hover,
+    .offer__button-content:nth-child(3):hover{
+    background-color: $color-footer;
+    color: $color-background;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+
 }
