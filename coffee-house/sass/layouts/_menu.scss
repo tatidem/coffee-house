@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -64,10 +65,10 @@
 }
 
 
-.gallery-item .image-wrapper img:hover {
-    cursor: pointer;
+// .gallery-item .image-wrapper img:hover {
+//     cursor: pointer;
 
-  }
+//   }
 
 .galery__grid {
     display: grid;

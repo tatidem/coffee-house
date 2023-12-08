@@ -275,8 +275,103 @@
     
     gap: 0.5rem;
   }
+}
 
- 
+
+
+
+
+@media only screen and (hover: hover){
+
+  a.nav-link:hover::after{
+    width: 100%;
+    left: 0;
+    transform: scaleX(1);
+}
+
+.header_menu-button:hover::before {
+  transform: scaleX(1);
+}
+
+
+  .mobile-app_button:hover{
+    cursor: pointer;
+    background-color: $color-footer;
+    color: $color-background;
+    border: 0.1rem solid $color-footer;
+    transition: all 0.7s ease;
+  }
+  
+  .mobile-app_button:hover path {
+    cursor: pointer;
+    fill: $color-background;
+    transition: all 0.7s ease;
+  }
+
+  .enjoy_menu-button:hover {
+    background-color: $color-background;
+    color: $color-text; 
+  }
+
+  .enjoy_menu-button:hover::after {
+    margin-left: 0.5rem;
+    opacity: 1;
+    transform: scale(1);
+    left: -1rem;
+   
+  }
+
+  .favorite__arrows button:hover {
+    cursor: pointer;
+    // color: $color-background;
+    background-color: $color-footer;
+    border: 0.1rem solid $color-footer;
+    transition: all 0.7s ease;
+    
+  }
+
+  .favorite__arrows_left:hover path {
+    stroke: $color-background;
+    transition: stroke 0.5s ease;
+  }
+
+  .favorite__arrows_right:hover path {
+    stroke: $color-background;
+    transition: stroke 0.5s ease;
+  }
+
+  .offer__button-content:nth-child(2):hover,
+.offer__button-content:nth-child(3):hover{
+  background-color: $color-footer;
+  color: $color-background;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.image-wrapper img:hover {
+  transform: scale(0.9);
+}
+
+.gallery-item .image-wrapper img:hover {
+  cursor: pointer;
+
+}
+
+
+.social:hover{
+  cursor: pointer;
+  background-color: $color-background;
+  border: 0.1rem solid $color-footer;
+
+  }
+
+.social:hover path{
+  stroke: $color-footer;
+
+  }
+  a.link-item:hover::before{
+    transform: scaleX(1);
+}
 
 }
 
@@ -287,110 +382,89 @@
 
 
 
-
-
-
-
-
-
-@media (hover: none){
+// @media (hover: none){
     
     
-    .enjoy_menu-button:hover {
-        background-color: $color-background;
-        color: $color-text; 
-      }
+//     .enjoy_menu-button:hover {
+//         background-color: $color-background;
+//         color: $color-text; 
+//       }
 
-    .enjoy_menu-button:hover::after {
-        margin-left: 0.5rem;
-        opacity: 1;
-        transform: scale(1);
-        left: -1rem;
-    }
+//     .enjoy_menu-button:hover::after {
+//         margin-left: 0.5rem;
+//         opacity: 1;
+//         transform: scale(1);
+//         left: -1rem;
+//     }
 
-    a.nav-link:hover::after{
-        width: 100%;
-        left: 0;
-        transform: scaleX(0);
-    } 
 
-    .image-wrapper img:hover {
-        transform: scale(1);
-      }  
+
+//     a.nav-link:hover::after{
+//         width: 100%;
+//         left: 0;
+//         transform: scaleX(0);
+//     } 
+
+//     .image-wrapper img:hover {
+//         transform: scale(1);
+//       }  
       
 
-    .social:hover{
-    cursor: pointer;
-    background-color: $color-background;
-    border: 0.1rem solid $color-background;
-    }
+//     .social:hover{
+//     cursor: pointer;
+//     background-color: $color-background;
+//     border: 0.1rem solid $color-background;
+//     }
 
-    .social:hover{
-        cursor: none;
-        background-color: $color-footer;
-        border: 0.1rem solid $color-background;
+//     .social:hover{
+//         cursor: none;
+//         background-color: $color-footer;
+//         border: 0.1rem solid $color-background;
     
-        }
+//         }
 
-        .social:hover path{
-            stroke: $color-background;
-        }       
+//         .social:hover path{
+//             stroke: $color-background;
+//         }       
 
-        a.link-item:hover::before{
-            transform: scaleX(0);
-        } 
+//         a.link-item:hover::before{
+//             transform: scaleX(0);
+//         } 
 
-        .gallery-item .image-wrapper img:hover {
-            cursor: none;
-          }
+//         .gallery-item .image-wrapper img:hover {
+//             cursor: none;
+//           }
           
           
-        .favorite__arrows button:hover {
-            cursor: pointer;
-            background-color: $color-background;
-            border: 0.1rem solid $color-footer;
-            transition: none;
+
+//         .favorite__arrows button:hover {
+//             cursor: pointer;
+//             background-color: $color-background;
+//             border: 0.1rem solid $color-footer;
+//             transition: none;
             
-          }
+//           }
 
-          .favorite__arrows_right:hover path {
-            stroke: $color-footer;
-            transition: none;
-          }
+//           .favorite__arrows_right:hover path {
+//             stroke: $color-footer;
+//             transition: none;
+//           }
         
-          .favorite__arrows_left:hover path {
-            stroke: $color-footer;
-            transition: none;
-          }
+//           .favorite__arrows_left:hover path {
+//             stroke: $color-footer;
+//             transition: none;
+//           }
 
-          .mobile-app_button:hover{
-            // pointer-events: none;
-            cursor: none;
-            // background-color: $color-footer;
-            // color: $color-background;
-            // border: 0.1rem solid $color-footer;
-            transition: none;
-            background-color: $color-background; 
-            color: $color-footer;
-           
-            transition: none; 
-          }
 
-          .mobile-app_button:hover path {
-            // fill: $color-background;
-            // transition: all 0.7s ease;
-            transition: none;
-            fill: $color-footer;
-          }
 
-          .offer__button-content:nth-child(2):hover,
-          .offer__button-content:nth-child(3):hover{
-            cursor: none;
-            transition:none;
-            transform: translate(0);
-            background-color: $color-background; 
-            color: $color-text;
-      }
-}
+//           .offer__button-content:nth-child(2):hover,
+//           .offer__button-content:nth-child(3):hover{
+//             cursor: none;
+//             transition:none;
+//             transform: translate(0);
+//             background-color: $color-background; 
+//             color: $color-text;
+//       }
+// }
  
 

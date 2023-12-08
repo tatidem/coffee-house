@@ -7,24 +7,28 @@ html {
     scroll-behavior: smooth;
     transition: all 0.5s ease-in-out;
     box-sizing: border-box;
-    background-color: $color-background
+    background-color: $color-background;
+    
 
   }
 
   body{
-    margin: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+    // box-sizing: border-box;
+    // width: 100%;
+  //   max-width: 1440px;
+  // padding: 0 4rem 4rem 4rem;
+  // margin: 0 auto;
+  // box-sizing: border-box;
   }
 
 .container {
-  max-width: 1440px;
+  max-width: 1440px !important;
   // width: 100%;
   padding: 0 4rem 4rem 4rem;
   margin: 0 auto;
-  
-  // overflow-x: hidden;
-  
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -110,10 +114,10 @@ h3{
 
 
 
-.enjoy_menu-button:hover {
-  background-color: $color-background;
-  color: $color-text; 
-}
+// .enjoy_menu-button:hover {
+//   background-color: $color-background;
+//   color: $color-text; 
+// }
 
 .enjoy_menu-button::after {
   content: url(../img/icons/cofee-cup.svg);
@@ -123,13 +127,13 @@ h3{
   transition: all 0.5s ease-in-out;
 
 }
-.enjoy_menu-button:hover::after {
-  margin-left: 0.5rem;
-  opacity: 1;
-  transform: scale(1);
-  left: -1rem;
+// .enjoy_menu-button:hover::after {
+//   margin-left: 0.5rem;
+//   opacity: 1;
+//   transform: scale(1);
+//   left: -1rem;
  
-}
+// }
 
 
 
@@ -168,31 +172,32 @@ h3{
   border: 0.1rem solid $color-text;
 }
 
-.favorite__arrows button:hover {
-  cursor: pointer;
-  // color: $color-background;
-  background-color: $color-footer;
-  border: 0.1rem solid $color-footer;
-  transition: all 0.7s ease;
+// .favorite__arrows button:hover {
+//   cursor: pointer;
+//   // color: $color-background;
+//   background-color: $color-footer;
+//   border: 0.1rem solid $color-footer;
+//   transition: all 0.7s ease;
   
-}
+// }
 
 
-.favorite__arrows_left:hover path {
-  stroke: $color-background;
-  transition: stroke 0.5s ease;
-}
+// .favorite__arrows_left:hover path {
+//   stroke: $color-background;
+//   transition: stroke 0.5s ease;
+// }
 
-.favorite__arrows_right:hover path {
-  stroke: $color-background;
-  transition: stroke 0.5s ease;
-}
+// .favorite__arrows_right:hover path {
+//   stroke: $color-background;
+//   transition: stroke 0.5s ease;
+// }
 
 //Mobile App
 
 .button.mobile-app_button{
   display: flex;
   justify-content: left;
+  color: $color-text;
 }
 
 .mobile-app__buttons{
@@ -228,18 +233,18 @@ h3{
   line-height: 150%;
 }
 
-.mobile-app_button:hover{
-  cursor: pointer;
-  background-color: $color-footer;
-  color: $color-background;
-  border: 0.1rem solid $color-footer;
-  transition: all 0.7s ease;
-}
+// .mobile-app_button:hover{
+//   cursor: pointer;
+//   background-color: $color-footer;
+//   color: $color-background;
+//   border: 0.1rem solid $color-footer;
+//   transition: all 0.7s ease;
+// }
 
-.mobile-app_button:hover path {
-  fill: $color-background;
-  transition: all 0.7s ease;
-}
+// .mobile-app_button:hover path {
+//   fill: $color-background;
+//   transition: all 0.7s ease;
+// }
 
 
 
@@ -276,13 +281,13 @@ h3{
   pointer-events: none;
 }
 
-.offer__button-content:nth-child(2):hover,
-.offer__button-content:nth-child(3):hover{
-  background-color: $color-footer;
-  color: $color-background;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
+// .offer__button-content:nth-child(2):hover,
+// .offer__button-content:nth-child(3):hover{
+//   background-color: $color-footer;
+//   color: $color-background;
+//   cursor: pointer;
+//   transition: all 0.5s ease-in-out;
+// }
 
 
 .header_menu-button_2{

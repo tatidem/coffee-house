@@ -44,11 +44,11 @@
     
   }
 
-  a.nav-link:hover::after{
-    width: 100%;
-    left: 0;
-    transform: scaleX(1);
-}
+//   a.nav-link:hover::after{
+//     width: 100%;
+//     left: 0;
+//     transform: scaleX(1);
+// }
 
 
   .header_menu-button, .enjoy_menu-button {
@@ -81,9 +81,9 @@
     
 }
 
-.header_menu-button:hover::before {
-    transform: scaleX(1);
-}
+// .header_menu-button:hover::before {
+//     transform: scaleX(1);
+// }
 
 .burger-icon{
   display: none;
