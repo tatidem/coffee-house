@@ -38,17 +38,17 @@
     position: absolute;
     height: 0.2rem;
     background-color: $color-text;
-    bottom: -0.3rem;
+    bottom: -0.4rem;
     transform: scaleX(0);
     transition: all 0.5s ease;
     
   }
 
-  a.nav-link:hover::after{
-    width: 100%;
-    left: 0;
-    transform: scaleX(1);
-}
+//   a.nav-link:hover::after{
+//     width: 100%;
+//     left: 0;
+//     transform: scaleX(1);
+// }
 
 
   .header_menu-button, .enjoy_menu-button {
@@ -75,15 +75,15 @@
     width: 100%;
     height: 0.2rem;
     background-color: $color-text;
-    bottom: -0.3rem;
+    bottom: -0.4rem;
     transform: scaleX(0);
     transition: all 0.5s ease;
     
 }
 
-.header_menu-button:hover::before {
-    transform: scaleX(1);
-}
+// .header_menu-button:hover::before {
+//     transform: scaleX(1);
+// }
 
 .burger-icon{
   display: none;
