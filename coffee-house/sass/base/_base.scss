@@ -294,6 +294,17 @@ h3{
   pointer-events: none;
 }
 
+.header_menu-button_2::after{
+  content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background-color: $color-text;
+    bottom: -0.4rem;
+    transform: scaleX(1);
+    transition: all 0.5s ease;
+}
+
 .offer__button-content p{
   font-family: Inter;
   font-size: 1.6rem;
