@@ -316,8 +316,12 @@ a.nav-link::after {
 
 .burger-lines .line {
   width: 1.6rem;
-  height: 0.15rem;
+  height: 0.1rem;
   background-color: #403F3D;
+}
+
+.burger-menu {
+  display: none;
 }
 
 .enjoy {
@@ -693,8 +697,87 @@ a.link-item::before {
   .burger-icon {
     display: flex;
   }
-  .burger-menu_show {
+  /* Add this style to show burger-icon when burger menu is not active */
+  body.no-scroll {
+    overflow: hidden;
+  }
+  .burger-menu {
     display: flex;
+    box-sizing: border-box;
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    z-index: 100;
+    padding: 0 4rem;
+    max-width: 76.8rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #E1D4C9;
+  }
+  .burger-menu.active {
+    display: flex;
+    transform: translateX(0);
+    box-sizing: border-box;
+  }
+  ul.nav_show {
+    display: flex;
+    margin: 6rem 0 10rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+  }
+  ul.nav_show a.nav-link {
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .burger_menu-button {
+    display: flex;
+    margin-right: 0.8rem;
+    align-items: center;
+    text-decoration: none;
+    color: #403F3D;
+  }
+  .burger_menu-button p {
+    margin: 0;
+    margin-right: 2.4rem;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .burger_menu-icon {
+    transform: scale(1.9);
+  }
+  .burger-icon .burger-lines {
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  .burger-icon.active .burger-lines .line-1 {
+    position: absolute;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: 0.5s ease;
+  }
+  .burger-icon.active .burger-lines .line-2 {
+    position: absolute;
+    transform: rotate(45deg) translateY(50%);
+    transition: all 0.5s ease;
+  }
+  .burger-icon.active {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+  }
+  .burger-icon {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
   }
   .enjoy {
     padding: 10rem 6rem;
