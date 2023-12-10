@@ -1,10 +1,33 @@
 .enjoy {
-    background: url("../img/img-hero.jpg") center/cover no-repeat;
-    border-radius: 4rem;
-    overflow: hidden; 
+    // background: url("../img/img-hero.jpg") center/cover no-repeat;
+    
+    // overflow: hidden; 
+
     padding: 10rem; 
-    max-width: 100%;
+    width: 100%;
+    max-width: 136rem;
     margin: 0 auto;
+    position: relative;
+    box-sizing:border-box;
+    
+  }
+
+  .enjoy-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+    z-index: -1;
+  }
+  
+  .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
   }
 
   .enjoy__content{

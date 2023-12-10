@@ -1,11 +1,7 @@
 
 @media (max-width: 1200px){
   
-    .container{
-        // width: 100%;
-        // margin: 0 auto;
-        overflow-x: hidden;
-    }
+    
     
     .mobile-app{
         margin-top: 10rem;
@@ -79,6 +75,10 @@
     .burger-icon{
         display: flex;
     }  
+
+    .burger-menu_show{
+      display: flex;
+    }
     
     .enjoy{
         padding: 10rem 6rem;
