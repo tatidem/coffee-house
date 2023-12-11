@@ -113,15 +113,6 @@ controls.forEach((control, index) => {
   });
 });
 
-let interval;
-
-const startInterval = () => {
-  interval = setInterval(() => {
-    nextSlide();
-  }, 4000);
-};
-
-
 // Swipe functionality
 sliderWrapper.addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
@@ -140,12 +131,25 @@ sliderWrapper.addEventListener('touchmove', (e) => {
       } else {
         nextSlide();
       }
+      
     }
   }
 });
 
 sliderWrapper.addEventListener('touchend', () => {
   isSwiping = false;
+  startInterval();
+ 
 });
+
+
+let interval;
+
+const startInterval = () => {
+  interval = setInterval(() => {
+    nextSlide();
+  }, 4000);
+};
+
 
 startInterval();
