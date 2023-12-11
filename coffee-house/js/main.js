@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleMenu();
   });
 
-  // Закрывать burger-menu при клике на элементы списка nav
+ 
   navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
-      event.preventDefault(); // Предотвратить стандартное поведение ссылки
+      event.preventDefault(); 
 
-      // Сначала закрыть burger-menu, затем открыть раздел
+   
       closeMenu(() => {
-        // Ваш код для открытия нужного раздела
+   
         window.location.href = link.getAttribute('href');
       });
     });
@@ -103,6 +103,7 @@ arrowLeft.addEventListener('click', prevSlide);
 
 controls.forEach((control, index) => {
   control.addEventListener('click', () => {
+    clearInterval(interval);
     const slideWidth = sliderWrapper.clientWidth;
     position = slideWidth * index;
     sliderLine.style.left = -position + 'px';
@@ -121,8 +122,6 @@ const startInterval = () => {
 };
 
 
-startInterval();
-
 // Swipe functionality
 sliderWrapper.addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
@@ -130,9 +129,10 @@ sliderWrapper.addEventListener('touchstart', (e) => {
 });
 
 sliderWrapper.addEventListener('touchmove', (e) => {
+  clearInterval(interval);
   if (isSwiping) {
     const deltaX = e.touches[0].clientX - startX;
-    // Чтобы избежать конфликтов со свайпом вверх/вниз, можно добавить дополнительные условия.
+  
     if (Math.abs(deltaX) > 50) {
       isSwiping = false;
       if (deltaX > 0) {
