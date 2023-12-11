@@ -47,78 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// const sliderLine = document.querySelector('.favorite__slider-line');
-// const arrowLeft = document.querySelector('.favorite__arrows_left');
-// const arrowRight = document.querySelector('.favorite__arrows_right');
-// const controls = document.querySelectorAll('.favorite-control');
-
-// let position = 0,
-//   controlIndex = 0;
-
-// // FUNCTIONS
-
-// const nextSlide = () => {
-//   clearInterval(interval); 
-//   if (position < (controls.length - 1) * 480) {
-//     position += 480;
-//     controlIndex++;
-//   } else {
-//     position = 0;
-//     controlIndex = 0;
-//   }
-//   sliderLine.style.left = -position + 'px';
-//   thisSlide(controlIndex);
-//   startInterval(); 
-// };
-
-// const prevSlide = () => {
-//   clearInterval(interval); 
-//   if (position > 0) {
-//     position -= 480;
-//     controlIndex--;
-//   } else {
-//     position = (controls.length - 1) * 480;
-//     controlIndex = controls.length - 1;
-//   }
-//   sliderLine.style.left = -position + 'px';
-//   thisSlide(controlIndex);
-//   startInterval(); 
-// };
-
-// const thisSlide = (index) => {
-//   clearInterval(interval);
-//   for (let control of controls) {
-//     control.classList.remove('active');
-//   }
-//   controls[index].classList.add('active');
-// };
-
-// // EVENT LISTENERS
-
-// arrowRight.addEventListener('click', nextSlide);
-// arrowLeft.addEventListener('click', prevSlide);
-
-// controls.forEach((control, index) => {
-//   control.addEventListener('click', () => {
-//     position = 480 * index;
-//     sliderLine.style.left = -position + 'px';
-//     controlIndex = index;
-//     thisSlide(controlIndex);
-//     startInterval(); 
-//   });
-// });
-
-// let interval;
-
-// const startInterval = () => {
-//   interval = setInterval(() => {
-//     nextSlide();
-//   }, 4000);
-// };
-
-// // Запускаем интервал в начале
-// startInterval();
-
 const sliderLine = document.querySelector('.favorite__slider-line');
 const arrowLeft = document.querySelector('.favorite__arrows_left');
 const arrowRight = document.querySelector('.favorite__arrows_right');
@@ -191,5 +119,33 @@ const startInterval = () => {
     nextSlide();
   }, 4000);
 };
+
+
+startInterval();
+
+// Swipe functionality
+sliderWrapper.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isSwiping = true;
+});
+
+sliderWrapper.addEventListener('touchmove', (e) => {
+  if (isSwiping) {
+    const deltaX = e.touches[0].clientX - startX;
+    // Чтобы избежать конфликтов со свайпом вверх/вниз, можно добавить дополнительные условия.
+    if (Math.abs(deltaX) > 50) {
+      isSwiping = false;
+      if (deltaX > 0) {
+        prevSlide();
+      } else {
+        nextSlide();
+      }
+    }
+  }
+});
+
+sliderWrapper.addEventListener('touchend', () => {
+  isSwiping = false;
+});
 
 startInterval();
