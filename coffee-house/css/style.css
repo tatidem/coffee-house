@@ -908,6 +908,15 @@ a.link-item::before {
   }
 }
 @media (max-width: 550px) {
+  .favorite__slide {
+    max-width: 34.8rem;
+  }
+  .favorite__slider-wrapper {
+    width: 34.8rem;
+  }
+  .favorite__slide img {
+    max-width: 34.8rem;
+  }
   .galery__grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
