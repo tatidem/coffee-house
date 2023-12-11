@@ -32,14 +32,33 @@
                 </a>
                 <div class="burger-icon">
                     <div class="burger-lines">
-                        <div class="line"></div>
-                        <div class="line"></div>
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
                     </div>
-                </div>  
-            </div>  
+                </div> 
+            </div> 
+            <div class="burger-menu">
+                <div class="burger-menu__text">
+                    <ul class="nav nav_show">
+                        <li><a class="nav-link" href="#favorite">Favorite coffee</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li ><a class="nav-link" href="#mobile-app">Mobile app</a></li>
+                        <li ><a class="nav-link" href="#contacts">Contact us</a></li>
+                    </ul>  
+                </div>
+                <a href="pages/menu.html" class="menu-button burger_menu-button">
+                    <p>Menu</p>
+                    <img src="img/icons/cofee-cup.svg" alt="menu-icon" class="burger_menu-icon">
+                </a>
+
         </header>
         <main>
             <section class="enjoy">
+                <div class="enjoy-video">
+                    <video loop="" muted="" autoplay="" class="background-video">
+                        <source src="img/video (2160p).mp4" />
+                      </video>
+                </div>
                 <div class="enjoy__content">
                     <h1 class="light"><span class="text-accent">Enjoy </span>premium<br>coffee at our<br>charming cafe</h1>
                     <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
@@ -63,17 +82,37 @@
                                 </svg>
                         </button>
                     </div>
-                    <div class="favorite_content">
-                        <img src="img/coffee-slider-1.png" alt="coffee-slider1">
-                        <h3>S’mores Frappuccino</h3>
-                        <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                        <div class="price">$5.50</div>
+                    <div class="favorite__content">
+                        <div class="favorite__slider-wrapper">
+                            <div class="favorite__slider-line">
+                                <div class="favorite__slide">
+                                    <img src="img/coffee-slider-1.png" alt="coffee-slider1">
+                                    <h3>S’mores Frappuccino</h3>
+                                    <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                    <div class="price">$5.50</div>
+                                </div>
+                                <div class="favorite__slide">
+                                    <img src="img/coffee-slider-2.png" alt="coffee-slider2">
+                                    <h3>Caramel Macchiato</h3>
+                                    <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                    <div class="price">$5.00</div>
+                                </div>
+                                <div class="favorite__slide">
+                                    <img src="img/coffee-slider-3.png" alt="coffee-slider3">
+                                    <h3>Ice coffee</h3>
+                                    <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                    <div class="price">$4.50</div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="favorite__controls">
-                            <button class="favorite-control favorite-control_active"></button>
+                            <button class="favorite-control active"></button>
                             <button class="favorite-control"></button>
                             <button class="favorite-control"></button>
                         </div>
                     </div>
+                    
                     <div class="favorite__arrows">
                         <button class="favorite__arrows_right">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,5 +250,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

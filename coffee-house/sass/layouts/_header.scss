@@ -1,7 +1,7 @@
-// header{
-//   max-width: 100%;
-//   margin: 0 auto;
-// }
+header{
+  position: relative;
+}
+
 .header__wrapper{
   
     display: flex;
@@ -105,8 +105,10 @@
 
 .burger-lines .line{
   width: 1.6rem;
-  height: 0.15rem;
+  height: 0.1rem;
   background-color: $color-text;
-  
 }
 
+.burger-menu{
+  display: none;
+}

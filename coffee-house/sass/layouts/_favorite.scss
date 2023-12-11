@@ -14,17 +14,45 @@
     margin-top: 3.5rem;
   }
 
- .favorite_content{
+  .favorite__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorite__slider-wrapper{
+    // display: flex;
+    // justify-content: center;
+    width: 48rem;
+    overflow: hidden;
+  }
+
+  .favorite__slider-line{
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: 1s;
+  }
+
+ .favorite__slide{
    margin-top: 0.5rem;
    display: flex;
+   max-width: 48rem;
+   width: 100%;
    flex-direction: column;
    align-items: center;
   }
+
+  .favorite__slide img{
+    max-width: 48rem;
+  }
+
+
   .favorite h3{
     margin-top: 2rem;
   }
 
-  .favorite_content p{
+  .favorite__slide p{
     max-width: 48rem;
     margin: 1.6rem 0;
     font-family: Inter;
