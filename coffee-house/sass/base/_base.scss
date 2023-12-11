@@ -152,22 +152,61 @@ h3{
 
 .favorite__controls{
   display: flex;
+  max-width: 14.4rem;
   margin-top: 4rem;
   justify-content: space-between;
   gap:1.2rem;
 }
 
-.favorite-control{
+// .favorite-control{
+//   width: 4rem;
+//   height: 0.4rem;
+//   background-color: $color-border-light;
+//   border-radius: 10rem;
+//   border: none;
+//   position: relative;
+// }
+
+// .favorite-control.active{
+//   background-color: $color-footer;
+  
+// }
+
+
+
+.favorite-control {
   width: 4rem;
   height: 0.4rem;
   background-color: $color-border-light;
   border-radius: 10rem;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.favorite-control_active{
-  background-color: $color-footer;
+.favorite-control.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: $color-footer 100%;
+  animation: fillAnimation 4s linear forwards;
 }
+
+@keyframes fillAnimation {
+    0% {
+    width: 0;
+    left: 0;
+  }
+  
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
 
 .favorite__arrows button{
   display: flex;
