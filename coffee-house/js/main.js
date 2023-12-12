@@ -154,45 +154,126 @@ const startInterval = () => {
 startInterval();
 
 //Modal window
+
 function modalLoad() {
-document.addEventListener('DOMContentLoaded', function () {
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  const overlay = document.querySelector('.overlay');
-  const menuWindow = document.querySelector('.menu-window');
-  const closeButton = document.querySelector('.menu-window .close-button');
+	var products;
+	var current_product;
+	var price_size;
+	var price_add;
+	var price_total;
+	document.addEventListener('DOMContentLoaded', function () {
+		const galleryItems = document.querySelectorAll('.gallery-item');
+		const overlay = document.querySelector('.overlay');
+		const menuWindow = document.querySelector('.menu-window');
+		const closeButton = document.querySelector('.menu-window .close-button');
+		
+		function setPrice(product, but) {
+			var prod = current_product;
+			price_total = parseFloat(current_product.price);
+			var butvol = but ? but.querySelector('.volume') : undefined;
+			if (butvol) {
+				butvol.classList.forEach(function(cls){
+					if (cls === "s" || cls === "m" || cls === "l") {
+						price_size = parseFloat(current_product.sizes[cls]["add-price"]);
+					}
+				});
+			}
+			price_add = 0;
+			menuWindow.querySelectorAll('.additives-buttons .additives').forEach(function(bbt){
+				if (bbt.classList.contains("active")) {
+					var addname = bbt.querySelector('.name').textContent;
+					var adddata = current_product.additives.find(function(n){ if (n.name === addname) return n;});
+					if (adddata) {
+						price_add += parseFloat(adddata["add-price"]);
+					} else {
+						alert("error, additives data not found");
+					}
+				}		
+			});					
+			price_total += price_size;
+			price_total += price_add;
+			menuWindow.querySelector('.price').textContent = "$" + price_total.toFixed(2);
+		}
+		
+		const size_button = menuWindow.querySelectorAll('.size-button');
+		size_button.forEach(function(but){
+			but.addEventListener('click', function (t) {
+				size_button.forEach(function(b){if(b != but) b.classList.remove('active');});
+				but.classList.toggle('active');
+				var clear_all = true; 
+				size_button.forEach(function(b){if(b.classList.contains('active')) {clear_all = false; return;}});
+				if (clear_all) {size_button[0].classList.add('active');}
+				setPrice(menuWindow.querySelector('.menu-window__content h3').textContent, but);
+			});
+		});
+		
+		const additives_buttons = menuWindow.querySelectorAll('.additives');
+		additives_buttons.forEach(function(but){
+			but.addEventListener('click', function () {
+				but.classList.toggle('active');
+				setPrice(menuWindow.querySelector('.menu-window__content h3').textContent, undefined);
+			});
+		});
+		
+		function openMenuWindow() {
+			menuWindow.style.display = 'block';
+			overlay.style.display = 'block';
+			document.body.style.overflow = 'hidden'; 
+		}
+		
+		function closeMenuWindow() {
+			menuWindow.style.display = 'none';
+			overlay.style.display = 'none';
+			document.body.style.overflow = ''; 
+		}
 
-  // Функция для открытия модального окна
-  function openMenuWindow() {
-    menuWindow.style.display = 'block';
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden'; 
-  }
+		galleryItems.forEach(function (item) {
+			item.addEventListener('click', function () {
+				openMenuWindow();
+				size_button.forEach(function(b, index){ if (index == 0) {b.classList.add('active')} else  {b.classList.remove('active');}});
+				additives_buttons.forEach(function(b){ b.classList.remove('active');});
+				var coffname = item.querySelector('.gallery-item__text h3').textContent;
+				products.forEach(function(prod, i){
+					if (prod.name === coffname){
+						menuWindow.querySelector('.menu-window__content h3').textContent = prod.name;
+						menuWindow.querySelector('.menu-window__content .description').textContent = prod.description;
+						var imgReplace = menuWindow.querySelector(".menu-window_coffee-image img");
+						imgReplace.src = "../img/coffee-"+(i+1).toString()+".jpg";
+						price_total = parseFloat(prod.price);
+						price_size = parseFloat(prod.sizes.s["add-price"]);
+						price_add = 0;
+						price_total += price_size;
+						price_total += price_add;
+						menuWindow.querySelector('.price').textContent = "$" + price_total.toFixed(2);
+						current_product = prod;
+					}
+				});
+			});
+		});
 
-  // Функция для закрытия модального окна
-  function closeMenuWindow() {
-    menuWindow.style.display = 'none';
-    overlay.style.display = 'none';
-    document.body.style.overflow = ''; // Разрешение прокрутки страницы
-  }
+		closeButton.addEventListener('click', function () {
+			closeMenuWindow();
+		});
 
-  // Обработчик событий для открытия модального окна при клике на .gallery-item
-  galleryItems.forEach(function (item) {
-  
-      item.addEventListener('click', function () {
-        openMenuWindow();
-      });
- 
-  });
+		overlay.addEventListener('click', function () {
+			closeMenuWindow();
+		});
+		  
+		menuWindow.addEventListener("contextmenu", function(e) {e.preventDefault();});
+		menuWindow.onselectstart = function(e) {e.preventDefault();};
 
-  // Обработчик события для закрытия модального окна при клике на кнопку "Close"
-  closeButton.addEventListener('click', function () {
-    closeMenuWindow();
-  });
-
-  // Закрытие модального окна при клике вне его области
-  overlay.addEventListener('click', function () {
-    closeMenuWindow();
-  });
-});
+		//JSON:  
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'products.json', true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				products = JSON.parse(xhr.responseText);
+			} else {
+				console.log("error, JSON not loaded(");
+		
+			}
+		};
+		xhr.send();
+	});
 }
-
