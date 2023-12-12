@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const burgerIcon = document.querySelector('.burger-icon');
   const burgerMenu = document.querySelector('.burger-menu');
   const navLinks = document.querySelectorAll('.nav_show a.nav-link');
-  const menuLink = document.querySelector('.burger_menu-button');
+  const menuLinks = document.querySelectorAll('.burger_menu-button');
   burgerIcon.addEventListener('click', function () {
     toggleMenu();
   });
@@ -22,15 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  menuLink.addEventListener('click', function (event) {
-	event.preventDefault(); 
-	closeMenu(() => {
- 
-	  window.location.href = link.getAttribute('href');
-	});
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); 
+
+   
+      closeMenu(() => {
+   
+        window.location.href = link.getAttribute('href');
+      });
+    });
   });
 
-  
   function toggleMenu() {
     burgerIcon.classList.toggle('active');
     burgerMenu.classList.toggle('active');
