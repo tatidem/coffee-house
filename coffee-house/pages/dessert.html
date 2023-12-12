@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee-house</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header__wrapper">
+                <a href="../index.html#header__wrapper" class="logo"><img src="../img/icons/logo.svg" alt=""></a>
+                <div class="header__nav">
+                    <ul class="nav">
+                        <li><a class="nav-link" href="../index.html#favorite">Favorite coffee</a></li>
+                        <li><a class="nav-link" href="../index.html#about">About</a></li>
+                        <li><a class="nav-link" href="../index.html#mobile-app">Mobile app</a></li>
+                        <li><a class="nav-link" href="#contacts">Contact us</a></li>
+                    </ul>
+                </div>
+                <a href="pages/menu.html" class="menu-button header_menu-button header_menu-button_2">
+                    <p>Menu</p>
+                    <img src="../img/icons/cofee-cup.svg" alt="menu-icon" class="menu-icon">
+                </a>
+                <div class="burger-icon">
+                    <div class="burger-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>    
+            </div>
+            <div class="burger-menu">
+                <!-- <div class="burger-menu__header">
+                    <a href="#" class="logo"><img src="img/icons/logo.svg" alt=""></a>
+                    <div class="burger-icon">
+                        <div class="burger-lines">
+                            <div class="line line-1"></div>
+                            <div class="line line-2"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="burger-menu__text">
+                    <ul class="nav nav_show">
+                        <li><a class="nav-link" href="../index.html#favorite">Favorite coffee</a></li>
+                        <li><a class="nav-link" href="../index.html#about">About</a></li>
+                        <li><a class="nav-link" href="../index.html#mobile-app">Mobile app</a></li>
+                        <li><a class="nav-link" href="#contacts">Contact us</a></li>
+                    </ul>  
+                </div>
+                <a href="#offer" class="menu-button burger_menu-button">
+                    <p>Menu</p>
+                    <img src="../img/icons/cofee-cup.svg" alt="menu-icon" class="burger_menu-icon">
+                </a>
+            </div>
+        </header>
+        <main>
+            <section class="offer">
+                <h1>
+                    Behind each of our cups hides an <span class="text-accent">amazing surprise</span> 
+                </h1>
+                <div class="offer__button">
+                    <a class="category coffee-button" href="menu.html">
+                        <div class="button offer__button-content">
+                            <img src="../img/icons/cup.svg" alt="cup">
+                            <p class="button-text">Coffee</p>   
+                        </div>
+                    </a>
+                    
+                    <a class="category tea-button" href="tea.html">
+                        <div class="button offer__button-content">
+                            <img src="../img/icons/pot.svg" alt="pot">
+                            <p class="button-text">Tea</p>   
+                        </div>
+                    </a>
+                    <a class="category dessert-button" href="dessert.html">
+                        <div class="button offer__button-content active">
+                            <img src="../img/icons/dessert.svg" alt="dessert">
+                            <p class="button-text">Dessert</p>   
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="offer__gallery">
+                    <div class="galery__grid">
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-1.png" alt="dessert-1">
+                            </div>
+                            <div class="gallery-item__text">
+                                <h3>Marble cheesecake</h3>
+                                <p>Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+                                <div class="price">$3.50</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-2.png" alt="dessert-2">
+                            </div>
+                            
+                            <div class="gallery-item__text">
+                                <h3>Red velvet</h3>
+                                <p>Layer cake with cream cheese frosting</p>
+                                <div class="price">$4.00</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-3.png" alt="dessert-3">
+                            </div>                            
+                            <div class="gallery-item__text">
+                                <h3>Cheesecakes</h3>
+                                <p>Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+                                <div class="price">$4.50</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-4.png" alt="dessert-4">
+                            </div>
+                            
+                            <div class="gallery-item__text">
+                                <h3>Creme brulee</h3>
+                                <p>Delicate creamy dessert in a caramel basket with wild berries</p>
+                                <div class="price">$4.00</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-5.png" alt="dessert-5">
+                            </div>
+                            <div class="gallery-item__text">
+                                <h3>Pancakes</h3>
+                                <p>Tender pancakes with strawberry jam and fresh strawberries</p>
+                                <div class="price">$4.50</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-6.png" alt="dessert-6">
+                            </div>                            
+                            <div class="gallery-item__text">
+                                <h3>Honey cake</h3>
+                                <p>Classic honey cake with delicate custard</p>
+                                <div class="price">$4.50</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-7.png" alt="dessert-7">
+                            </div>                            
+                            <div class="gallery-item__text">
+                                <h3>Chocolate cake</h3>
+                                <p>Cake with hot chocolate filling and nuts with dried apricots</p>
+                                <div class="price">$5.50</div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-wrapper">
+                                <img src="..//img/dessert-8.png" alt="dessert-8">
+                            </div>
+                            <div class="gallery-item__text">
+                                <h3>Black forest</h3>
+                                <p>A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+                                <div class="price">$6.50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="refresh-button__wrapper">               
+                        <div class="refresh-button">
+                            <img src="../img/icons/refresh.svg" alt="refresh">
+                        </div>                           
+                    </div>
+                </div>   
+            </section>
+           
+        </main>
+
+        <footer class="contacts" id="contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__content light">
+                    <div class="contacts__content_left">
+                        <h2 class="light">Sip, Savor, Smile. <span class="text-accent">It’s coffee time!</span></h2>
+                        <ul class="social-media">
+                            <li class="social">
+                                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="twitter">
+                                    <path id="Vector_8" d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    </svg>
+                                    </a>
+                            </li>
+                            <li class="social">
+                                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="instagram">
+                                    <path id="Vector_9" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path id="Vector_10" d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#E1D4C9"/>
+                                    <path id="Vector_11" d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    </svg>
+                                    </a>
+                            </li>
+                            <li class="social">
+                                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="facebook">
+                                    <path id="Vector_12" d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__content_right">
+                        <p class="contact">Contact us</p>
+                        <div class="contact-item">
+                            <a href="https://maps.app.goo.gl/5iLgUVUuEvBeufiF6" class="link-item" target="_blank">
+                                <img src="../img/icons/pin-alt.svg" alt="pin-alt">
+                                <p> 8558 Green Rd.,  LA</p>
+                            </a>
+                            <a href="tel:+1(603)555-0123" class="link-item" target="_blank">
+                                <img src="../img/icons/phone.svg" alt="phone" >
+                                <p> +1 (603) 555-0123</p>
+                            </a>
+                            <div class="link-item">
+                                <img src="../img/icons/clock.svg" alt="clock">
+                                <p>
+                                    Mon-Sat: 9:00 AM – 23:00 PM
+                                </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="menu-window">
+            <div class="menu-window__wrapper">
+                <div class="menu-window_coffee-image">
+                    <img src="../img/coffee-1.jpg" alt="coffee-1">
+                </div>
+                <div class="menu-window__content">
+                    <h3 class="name">Irish coffee</h3>
+                    <p class="description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                    <span>Size</span>
+                    <div class="size-buttons">
+                        <div class="size-button sizes">
+                            <div class="volume s">S</div>
+                            <div class="size">200&nbspml</div>
+                        </div>
+                        <div class="size-button sizes">
+                            <div class="volume m">M</div>
+                            <div class="size">300&nbspml</div>
+                        </div>
+                        <div class="size-button sizes">
+                            <div class="volume l">L</div>
+                            <div class="size">400&nbspml</div>
+                        </div>
+                    </div>
+                    <span>Additives</span>
+                    <div class="additives-buttons">
+                        <div class="additives">
+                            <div class="number">1</div>
+                            <div class="additive name">Sugar</div>
+                        </div>
+                        <div class="additives">
+                            <div class="number">2</div>
+                            <div class="additive name">Cinnamon</div>
+                        </div>
+                        <div class="additives">
+                            <div class="number">3</div>
+                            <div class="additive name">Syrup</div>
+                        </div>
+                    </div>
+                    <div class="total-amount">
+                        <h3>Total:</h3>
+                        <div class="price">$7.00</div>
+                    </div>
+                    <div class="text-divider"></div>
+                    <div class="info-block">
+                        <div class="icon">
+                            <img src="../img/icons/info-empty.svg" alt="info">
+                        </div>
+                        <div class="info-block_text">
+                            The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+                        </div>
+                    </div>
+                    <div class="close-button">Close</div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script>modalLoad()</script>
+</body>

@@ -1,20 +1,19 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const burgerIcon = document.querySelector('.burger-icon');
   const burgerMenu = document.querySelector('.burger-menu');
   const navLinks = document.querySelectorAll('.nav_show a.nav-link');
   const menuLinks = document.querySelectorAll('.burger_menu-button');
+  const categoryLinks = document.querySelectorAll('.category');
+  const offerButtons = document.querySelectorAll('.offer__button-content');
+
   burgerIcon.addEventListener('click', function () {
     toggleMenu();
   });
 
- 
   navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault(); 
 
-   
       closeMenu(() => {
    
         window.location.href = link.getAttribute('href');
@@ -26,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 menuLinks.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault(); 
-
-   
       closeMenu(() => {
    
         window.location.href = link.getAttribute('href');
@@ -58,113 +55,119 @@ menuLinks.forEach(link => {
   }
 });
 
+function sliderstart(){
+
+document.addEventListener('DOMContentLoaded', function () {
+	//SLIDER
+
+	const sliderLine = document.querySelector('.favorite__slider-line');
+	const arrowLeft = document.querySelector('.favorite__arrows_left');
+	const arrowRight = document.querySelector('.favorite__arrows_right');
+	const controls = document.querySelectorAll('.favorite-control');
+	const sliderWrapper = document.querySelector('.favorite__slider-wrapper');
+
+	let position = 0,
+	  controlIndex = 0;
+
+	// FUNCTIONS
+
+	const nextSlide = () => {
+	  clearInterval(interval);
+	  const slideWidth = sliderWrapper.clientWidth;
+	  if (position < (controls.length - 1) * slideWidth) {
+		position += slideWidth;
+		controlIndex++;
+	  } else {
+		position = 0;
+		controlIndex = 0;
+	  }
+	  sliderLine.style.left = -position + 'px';
+	  thisSlide(controlIndex);
+	  startInterval();
+	};
+
+	const prevSlide = () => {
+	  clearInterval(interval);
+	  const slideWidth = sliderWrapper.clientWidth;
+	  if (position > 0) {
+		position -= slideWidth;
+		controlIndex--;
+	  } else {
+		position = (controls.length - 1) * slideWidth;
+		controlIndex = controls.length - 1;
+	  }
+	  sliderLine.style.left = -position + 'px';
+	  thisSlide(controlIndex);
+	  startInterval();
+	};
+
+	const thisSlide = (index) => {
+	  clearInterval(interval);
+	  for (let control of controls) {
+		control.classList.remove('active');
+	  }
+	  controls[index].classList.add('active');
+	};
+
+	// EVENT LISTENERS
+
+	arrowRight.addEventListener('click', nextSlide);
+	arrowLeft.addEventListener('click', prevSlide);
+
+	controls.forEach((control, index) => {
+	  control.addEventListener('click', () => {
+		clearInterval(interval);
+		const slideWidth = sliderWrapper.clientWidth;
+		position = slideWidth * index;
+		sliderLine.style.left = -position + 'px';
+		controlIndex = index;
+		thisSlide(controlIndex);
+		startInterval();
+	  });
+	});
+
+	// Swipe functionality
+
+	sliderWrapper.addEventListener('touchstart', (e) => {
+	  startX = e.touches[0].clientX;
+	  isSwiping = true;
+	});
+
+	sliderWrapper.addEventListener('touchmove', (e) => {
+	  clearInterval(interval);
+	  if (isSwiping) {
+		const deltaX = e.touches[0].clientX - startX;
+	  
+		if (Math.abs(deltaX) > 50) {
+		  isSwiping = false;
+		  if (deltaX > 0) {
+			prevSlide();
+		  } else {
+			nextSlide();
+		  }
+		  
+		}
+	  }
+	});
+
+	sliderWrapper.addEventListener('touchend', () => {
+	  isSwiping = false;
+	  startInterval();
+	 
+	});
 
 
-const sliderLine = document.querySelector('.favorite__slider-line');
-const arrowLeft = document.querySelector('.favorite__arrows_left');
-const arrowRight = document.querySelector('.favorite__arrows_right');
-const controls = document.querySelectorAll('.favorite-control');
-const sliderWrapper = document.querySelector('.favorite__slider-wrapper');
+	let interval;
 
-let position = 0,
-  controlIndex = 0;
+	const startInterval = () => {
+	  interval = setInterval(() => {
+		nextSlide();
+	  }, 4000);
+	};
 
-// FUNCTIONS
-
-const nextSlide = () => {
-  clearInterval(interval);
-  const slideWidth = sliderWrapper.clientWidth;
-  if (position < (controls.length - 1) * slideWidth) {
-    position += slideWidth;
-    controlIndex++;
-  } else {
-    position = 0;
-    controlIndex = 0;
-  }
-  sliderLine.style.left = -position + 'px';
-  thisSlide(controlIndex);
-  startInterval();
-};
-
-const prevSlide = () => {
-  clearInterval(interval);
-  const slideWidth = sliderWrapper.clientWidth;
-  if (position > 0) {
-    position -= slideWidth;
-    controlIndex--;
-  } else {
-    position = (controls.length - 1) * slideWidth;
-    controlIndex = controls.length - 1;
-  }
-  sliderLine.style.left = -position + 'px';
-  thisSlide(controlIndex);
-  startInterval();
-};
-
-const thisSlide = (index) => {
-  clearInterval(interval);
-  for (let control of controls) {
-    control.classList.remove('active');
-  }
-  controls[index].classList.add('active');
-};
-
-// EVENT LISTENERS
-
-arrowRight.addEventListener('click', nextSlide);
-arrowLeft.addEventListener('click', prevSlide);
-
-controls.forEach((control, index) => {
-  control.addEventListener('click', () => {
-    clearInterval(interval);
-    const slideWidth = sliderWrapper.clientWidth;
-    position = slideWidth * index;
-    sliderLine.style.left = -position + 'px';
-    controlIndex = index;
-    thisSlide(controlIndex);
-    startInterval();
-  });
+	startInterval();
 });
-
-// Swipe functionality
-sliderWrapper.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-  isSwiping = true;
-});
-
-sliderWrapper.addEventListener('touchmove', (e) => {
-  clearInterval(interval);
-  if (isSwiping) {
-    const deltaX = e.touches[0].clientX - startX;
-  
-    if (Math.abs(deltaX) > 50) {
-      isSwiping = false;
-      if (deltaX > 0) {
-        prevSlide();
-      } else {
-        nextSlide();
-      }
-      
-    }
-  }
-});
-
-sliderWrapper.addEventListener('touchend', () => {
-  isSwiping = false;
-  startInterval();
- 
-});
-
-
-let interval;
-
-const startInterval = () => {
-  interval = setInterval(() => {
-    nextSlide();
-  }, 4000);
-};
-
-startInterval();
+}
 
 //Modal window
 
@@ -174,14 +177,14 @@ function modalLoad() {
 	var price_size;
 	var price_add;
 	var price_total;
+	
 	document.addEventListener('DOMContentLoaded', function () {
 		const galleryItems = document.querySelectorAll('.gallery-item');
 		const overlay = document.querySelector('.overlay');
 		const menuWindow = document.querySelector('.menu-window');
 		const closeButton = document.querySelector('.menu-window .close-button');
-		
+		var prod = current_product;
 		function setPrice(product, but) {
-			var prod = current_product;
 			price_total = parseFloat(current_product.price);
 			var butvol = but ? but.querySelector('.volume') : undefined;
 			if (butvol) {
@@ -239,26 +242,66 @@ function modalLoad() {
 			overlay.style.display = 'none';
 			document.body.style.overflow = ''; 
 		}
-
+		function getPageName(url) {
+			var pageName = url.split('/').pop().split('.')[0];
+			return pageName.length > 0 ? pageName : null;
+		}
 		galleryItems.forEach(function (item) {
 			item.addEventListener('click', function () {
 				openMenuWindow();
 				size_button.forEach(function(b, index){ if (index == 0) {b.classList.add('active')} else  {b.classList.remove('active');}});
 				additives_buttons.forEach(function(b){ b.classList.remove('active');});
 				var coffname = item.querySelector('.gallery-item__text h3').textContent;
+				var active_page_name = getPageName(window.location.href);
+				var active_category;
+				var additives_names;
+				switch (active_page_name) {
+					case 'menu':
+						active_category = "coffee";
+						additives_names = ["Sugar", "Cinnamon", "Syrup"];
+						break;
+					case 'tea':
+						active_category = "tea";
+						additives_names = ["Sugar", "Lemon", "Syrup"];
+						break;
+					case 'dessert':
+						active_category = "dessert";
+						additives_names = ["Berries", "Nuts", "Jam"];
+				}
+				menuWindow.querySelectorAll('.additives-buttons .additives').forEach(function(bbt, i){
+					//alert(bbt.querySelector('.additive.name').innerHTML);
+					bbt.querySelector('.additive.name').innerHTML = additives_names[i];
+					//bbt.querySelector('.additive.name').textContent = additives_names[i];
+				});
+				var j = 0;
 				products.forEach(function(prod, i){
-					if (prod.name === coffname){
-						menuWindow.querySelector('.menu-window__content h3').textContent = prod.name;
-						menuWindow.querySelector('.menu-window__content .description').textContent = prod.description;
-						var imgReplace = menuWindow.querySelector(".menu-window_coffee-image img");
-						imgReplace.src = "../img/coffee-"+(i+1).toString()+".jpg";
-						price_total = parseFloat(prod.price);
-						price_size = parseFloat(prod.sizes.s["add-price"]);
-						price_add = 0;
-						price_total += price_size;
-						price_total += price_add;
-						menuWindow.querySelector('.price').textContent = "$" + price_total.toFixed(2);
-						current_product = prod;
+					if (prod.category === active_category) {
+						if (prod.name === coffname){
+							menuWindow.querySelector('.menu-window__content h3').textContent = prod.name;
+							menuWindow.querySelector('.menu-window__content .description').textContent = prod.description;
+							var imgReplace = menuWindow.querySelector(".menu-window_coffee-image img");
+							switch (active_page_name) {
+								case 'menu':
+									imgReplace.src = "../img/coffee-"+(j+1).toString()+".jpg";
+									break;
+								case 'tea':
+									imgReplace.src = "../img/tea-"+(j+1).toString()+".png";
+									break;
+								case 'dessert':
+									imgReplace.src = "../img/dessert-"+(j+1).toString()+".png";
+									break;
+								default:
+									console.log("error src(");
+							}
+							price_total = parseFloat(prod.price);
+							price_size = parseFloat(prod.sizes.s["add-price"]);
+							price_add = 0;
+							price_total += price_size;
+							price_total += price_add;
+							menuWindow.querySelector('.price').textContent = "$" + price_total.toFixed(2);
+							current_product = prod;
+						}
+						j += 1;
 					}
 				});
 				var clbut = menuWindow.querySelector('.close-button');
@@ -279,23 +322,7 @@ function modalLoad() {
 		  
 		menuWindow.addEventListener("contextmenu", function(e) {e.preventDefault();});
 		menuWindow.onselectstart = function(e) {e.preventDefault();};
-
-		//JSON:  
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'products.json', true);
-		xhr.setRequestHeader('Content-Type', 'application/json');
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4 && xhr.status === 200) {
-				products = JSON.parse(xhr.responseText);
-			} else {
-				console.log("error, JSON not loaded(");
 		
-			}
-		};
-		xhr.send();
-	});
-
-	document.addEventListener('DOMContentLoaded', function() {
 		const refreshButton = document.querySelector('.refresh-button');
 		const galleryItemsToHide = document.querySelectorAll('.gallery-item:nth-child(5), .gallery-item:nth-child(6), .gallery-item:nth-child(7), .gallery-item:nth-child(8)');
 	
@@ -306,6 +333,23 @@ function modalLoad() {
 			item.style.display = 'flex';
 		  });
 		});
-	  });
+				
+		//JSON:  
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'products.json', true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				products = JSON.parse(xhr.responseText);
+				
+			} else {
+				console.log("error, JSON not loaded(");
+				
+			}
+		};
+		xhr.send();
+		
+	});
 }
+
 
