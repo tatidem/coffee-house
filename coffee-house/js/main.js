@@ -151,5 +151,47 @@ const startInterval = () => {
   }, 4000);
 };
 
-
 startInterval();
+
+//Modal window
+function modalLoad() {
+document.addEventListener('DOMContentLoaded', function () {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const overlay = document.querySelector('.overlay');
+  const menuWindow = document.querySelector('.menu-window');
+  const closeButton = document.querySelector('.menu-window .close-button');
+
+  // Функция для открытия модального окна
+  function openMenuWindow() {
+    menuWindow.style.display = 'block';
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; 
+  }
+
+  // Функция для закрытия модального окна
+  function closeMenuWindow() {
+    menuWindow.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.style.overflow = ''; // Разрешение прокрутки страницы
+  }
+
+  // Обработчик событий для открытия модального окна при клике на .gallery-item
+  galleryItems.forEach(function (item) {
+  
+      item.addEventListener('click', function () {
+        openMenuWindow();
+      });
+ 
+  });
+
+  // Обработчик события для закрытия модального окна при клике на кнопку "Close"
+  closeButton.addEventListener('click', function () {
+    closeMenuWindow();
+  });
+
+  // Закрытие модального окна при клике вне его области
+  overlay.addEventListener('click', function () {
+    closeMenuWindow();
+  });
+});
+}

@@ -504,6 +504,21 @@
     transform: scaleX(1);
 }
 
+.size-button:hover, .additives:hover,
+.close-button:hover {
+    background: $color-footer;
+    color: $color-background;
+}
+
+.size-button:hover .size,
+.additives:hover .name{
+    color: $color-background;
+}
+
+.gallery-item:hover{
+  cursor: pointer;
+}
+
 }
 
 
