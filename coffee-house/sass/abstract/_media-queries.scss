@@ -279,7 +279,53 @@
     .favorite__wrapper{
         width: 100%;
     }
+
+
+    // Modal window
+
+    .menu-window__wrapper{
+      
+      width: 100%;
+      max-width: 68.8rem;
+     
+  }
+
+  .menu-window__content{
+    
+    max-width: 34.2rem;
+    box-sizing:border-box
+    
 }
+
+  .size-buttons, .additives-buttons{
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 30rem;
+    
+}
+}
+
+@media (max-width: 700px){
+  .menu-window_coffee-image{
+    display: none;
+
+     
+}
+.menu-window__wrapper{
+      
+  width: 100%;
+  max-width: 34.2rem;
+ 
+}
+
+.menu-window__content{
+
+  padding-left: 0px;
+
+}
+
+}
+
 
 @media (max-width: 675px){
     .favorite__arrows button{

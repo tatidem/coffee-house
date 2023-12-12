@@ -23,3 +23,5 @@ xhr.onreadystatechange = function () {
 
 // Отправляем запрос
 xhr.send();
+
+
