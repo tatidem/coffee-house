@@ -248,11 +248,16 @@ function modalLoad() {
 						current_product = prod;
 					}
 				});
+				var clbut = menuWindow.querySelector('.close-button');
+				menuWindow.querySelector('.close-button').addEventListener('click', function (e) {
+					clbut.classList.add('active');
+				});
+				clbut.classList.remove('active');
 			});
 		});
 
 		closeButton.addEventListener('click', function () {
-			closeMenuWindow();
+			setTimeout(closeMenuWindow, 200);
 		});
 
 		overlay.addEventListener('click', function () {
@@ -276,4 +281,18 @@ function modalLoad() {
 		};
 		xhr.send();
 	});
+
+	document.addEventListener('DOMContentLoaded', function() {
+		const refreshButton = document.querySelector('.refresh-button');
+		const galleryItemsToHide = document.querySelectorAll('.gallery-item:nth-child(5), .gallery-item:nth-child(6), .gallery-item:nth-child(7), .gallery-item:nth-child(8)');
+	
+		refreshButton.addEventListener('click', function() {
+		  
+		  refreshButton.style.display = 'none';
+		  galleryItemsToHide.forEach(item => {
+			item.style.display = 'flex';
+		  });
+		});
+	  });
 }
+
