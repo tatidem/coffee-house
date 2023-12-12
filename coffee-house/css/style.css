@@ -709,8 +709,26 @@ a.link-item::before {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .menu-window__wrapper {
   display: flex;
   max-width: 80rem;
@@ -787,9 +805,9 @@ p.description {
 }
 
 .size-button.active,
-.additives.active {
+.additives.active, .close-button.active {
   color: #E1D4C9;
-  background: #665F55;
+  background: #665F55 !important;
   border: 0.1rem solid #665F55;
 }
 
