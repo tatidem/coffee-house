@@ -209,18 +209,6 @@ h3 {
   border: 0.1rem solid #C1B6AD;
 }
 
-.offer__button-content:first-child {
-  background-color: #665F55;
-  color: #E1D4C9;
-  pointer-events: none;
-}
-
-.offer__button-content:first-child {
-  background-color: #665F55;
-  color: #E1D4C9;
-  pointer-events: none;
-}
-
 .header_menu-button_2 {
   pointer-events: none;
 }
@@ -243,6 +231,20 @@ h3 {
   font-weight: 600;
   line-height: 160%;
   margin: 0;
+}
+
+.tea-button,
+.dessert-button,
+.coffee-button {
+  text-decoration: none;
+  color: #403F3D;
+}
+
+.offer__button-content.active {
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 header {
@@ -1249,8 +1251,7 @@ p.description {
     stroke: #E1D4C9;
     transition: stroke 0.5s ease;
   }
-  .offer__button-content:nth-child(2):hover,
-  .offer__button-content:nth-child(3):hover {
+  .offer__button-content:hover {
     background-color: #665F55;
     color: #E1D4C9;
     cursor: pointer;

@@ -318,17 +318,17 @@ h3{
   border: 0.1rem solid $color-border-light
 }
 
-.offer__button-content:first-child{
-  background-color: $color-footer;
-  color: $color-background;
-  pointer-events: none;
-}
+// .offer__button-content:first-child{
+//   background-color: $color-footer;
+//   color: $color-background;
 
-.offer__button-content:first-child{
-  background-color: $color-footer;
-  color: $color-background;
-  pointer-events: none;
-}
+// }
+
+// .offer__button-content:first-child{
+//   background-color: $color-footer;
+//   color: $color-background;
+
+// }
 
 // .offer__button-content:nth-child(2):hover,
 // .offer__button-content:nth-child(3):hover{
@@ -363,4 +363,16 @@ h3{
   margin: 0;
 }
 
+.tea-button,
+.dessert-button,
+.coffee-button{
+  text-decoration: none;
+  color: $color-text;
+}
 
+.offer__button-content.active {
+  background-color: $color-footer;
+  color: $color-background;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}

@@ -518,8 +518,8 @@
     transition: stroke 0.5s ease;
   }
 
-  .offer__button-content:nth-child(2):hover,
-.offer__button-content:nth-child(3):hover{
+
+  .offer__button-content:hover {
   background-color: $color-footer;
   color: $color-background;
   cursor: pointer;
