@@ -88,6 +88,8 @@ p.description{
     margin-right: 7.2rem ;
 }
 
+
+
 .size-button, .additives{
     display: flex;
     margin-right: 0;
@@ -98,6 +100,24 @@ p.description{
     border-radius: 100px;
     background: $color-background;
     border: 0.1rem solid $color-border-light;
+}
+
+.size-button.active,
+.additives.active{
+ color: #E1D4C9;
+    background: #665F55;
+ border: 0.1rem solid #665F55;
+ }
+
+ .size-button.active .size,
+ .additives.active .name {
+    color: #E1D4C9;
+ } 
+ 
+ .size-button,
+.additives,
+.close-button{
+  cursor: pointer;
 }
 
 // .size-button:hover, .additives:hover,
