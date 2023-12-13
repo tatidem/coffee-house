@@ -255,22 +255,31 @@ function modalLoad() {
 				var active_page_name = getPageName(window.location.href);
 				var active_category;
 				var additives_names;
+				var mass;
 				switch (active_page_name) {
 					case 'menu':
 						active_category = "coffee";
 						additives_names = ["Sugar", "Cinnamon", "Syrup"];
+						mass = ["200&#160;ml", "300&#160;ml ", "400&#160;ml"];
 						break;
 					case 'tea':
 						active_category = "tea";
 						additives_names = ["Sugar", "Lemon", "Syrup"];
+						mass = ["200&#160;ml", "300&#160;ml ", "400&#160;ml"];
 						break;
 					case 'dessert':
 						active_category = "dessert";
 						additives_names = ["Berries", "Nuts", "Jam"];
+						mass = ["50&#160;g", "100&#160;g ", "200&#160;g"];
 				}
 				menuWindow.querySelectorAll('.additives-buttons .additives').forEach(function(bbt, i){
 					//alert(bbt.querySelector('.additive.name').innerHTML);
 					bbt.querySelector('.additive.name').innerHTML = additives_names[i];
+					//bbt.querySelector('.additive.name').textContent = additives_names[i];
+				});
+				menuWindow.querySelectorAll('.size-buttons .size-button').forEach(function(bbt, i){
+					//alert(bbt.querySelector('.additive.name').innerHTML);
+					bbt.querySelector('.size').innerHTML = mass[i];
 					//bbt.querySelector('.additive.name').textContent = additives_names[i];
 				});
 				var j = 0;

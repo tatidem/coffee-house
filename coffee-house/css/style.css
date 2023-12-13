@@ -1258,7 +1258,7 @@ p.description {
     transition: all 0.5s ease-in-out;
   }
   .image-wrapper img:hover {
-    transform: scale(0.9);
+    transform: scale(0.92);
   }
   .gallery-item .image-wrapper img:hover {
     cursor: pointer;
